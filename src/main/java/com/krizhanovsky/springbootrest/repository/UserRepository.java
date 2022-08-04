@@ -7,9 +7,13 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User,Integer> {
 
-    public User findUserById(int id);
+     User findUserById(int id);
 
-    public boolean deleteUserById(int id);
+     boolean deleteUserById(int id);
+
+     boolean existsByEmail(String email);
+
+     boolean existsById(int id);
 
 }
 
